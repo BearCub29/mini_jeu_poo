@@ -52,7 +52,7 @@ while  human_player.life_points > 0 &&  (enemy_1.life_points > 0 || enemy_2.life
   elsif choice == "1"
     human_player.attacks(enemy_2)
   else
-   puts "Vous passez votre tour,dommage... :("
+    puts "Vous passez votre tour,dommage... :("
   end
   puts " "
   puts "Les autres joueurs t'attaquent !"
@@ -60,17 +60,15 @@ while  human_player.life_points > 0 &&  (enemy_1.life_points > 0 || enemy_2.life
   gets.chomp
   enemies.each do |enemy|
     if enemy.life_points > 0
-    puts "---------------------------------------------"
-    enemy.attacks(human_player)
-    puts "---------------------------------------------"
-    puts " "
+      puts "---------------------------------------------"
+      enemy.attacks(human_player)
+      puts "---------------------------------------------"
+      puts " "
     end
   end
-
 end
 #Message final-----------------------------------------
 puts "La partie est finie!!!"
-
 if human_player.life_points > 0
   puts "BRAVO ! TU AS GAGNE !"
 else

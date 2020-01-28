@@ -8,7 +8,6 @@ class Game
     enemy_3 = Player.new("DarkVador")
     enemy_4 = Player.new("Voldemort")
     @enemies = [enemy_1,enemy_2,enemy_3,enemy_4] 
-    
   end
 
   def kill_player(enemy_test)
@@ -20,7 +19,7 @@ class Game
   end
 
   def is_still_ongoing?
-    if human_player.life_points > 0 || @enemies.length > 0
+    if @enemies.length > 0 && human_player.life_points > 0
       return true
     else 
       return false
@@ -33,17 +32,18 @@ class Game
   end
 
   def menu
-    
-    puts "Quelle action veux-tu effectuer ?"
+    puts " "
+    puts "Quelle action veux-tu effectuer ?\n\n"
     puts "a - chercher une meilleur arme"
-    puts "s - chercher à se soigner "
-    puts "Attaquer un joueur en vue :"
+    puts "s - chercher à se soigner \n\n"
+    puts "Attaquer un joueur en vue :\n\n"
     num = 0
     @enemies.each do |enemy|
       print "#{num} - "
       enemy.show_state
       num = num + 1
     end
+    puts " "
     print "choix : > "
   end
 
@@ -79,7 +79,8 @@ class Game
   end
 
   def end
-    puts "La partie est finie!!!"
+    puts " "
+    puts "La partie est finie!!!\n\n"
     if human_player.life_points > 0
       puts "BRAVO ! TU AS GAGNE !"
     else
