@@ -4,7 +4,7 @@ Un petit jeu de combat du type Fortnite.
 
 Version 1.0 : coder un combat entre 2 joueurs
 
-app.rb 
+app.rb player.rb
 
 Version 2.0 : créer un nouveau type de joueur
 
