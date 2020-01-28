@@ -1,4 +1,4 @@
-Mini jeu en Poo
+Mini jeu pour apprendre le codage en Poo
 
 Un petit jeu de combat du type Fortnite.
 
@@ -8,11 +8,11 @@ app.rb player.rb
 
 Version 2.0 : créer un nouveau type de joueur
 
-app_2.rb
+app_2.rb player.rb
 
 Version 3.0 : un jeu mieux organisé et plus d'ennemis
 
-app_3.rb
+app_3.rb player.rb game.rb
 
 source "https://rubygems.org"
 Version ruby '2.6.1'
