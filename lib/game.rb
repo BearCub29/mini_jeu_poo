@@ -53,6 +53,8 @@ class Game
       human_player.search_weapon
     elsif choice == "s"
       human_player.search_health_pack
+    elsif choice > @enemies.length.to_s
+      puts "Vous passez votre tour,dommage... :("
     else
       z = choice.to_i
       human_player.attacks(@enemies[z])
